@@ -1,0 +1,30 @@
+/* --- Configurações Gerais --- */
+body {
+    background-color: rgb(198, 231, 220);
+    /* Removi o 'background: fixed;' */
+}
+
+/* ESTA É A CLASSE QUE CENTRALIZA O LAYOUT (A PÁGINA)
+*/
+.container {
+  max-width: 960px;     /* Largura máxima do seu conteúdo */
+  margin-left: auto;    /* Mágica para centralizar */
+  margin-right: auto;   /* Mágica para centralizar */
+  
+  padding-left: 15px;   /* Respiro nas laterais */
+  padding-right: 15px;  /* Respiro nas laterais */
+}
+
+
+
+.boas-vindas {
+    text-align: center;
+}
+
+.container-prevencao {
+    text-align: center;
+}
+
+.container-saudemental {
+    text-align: center;
+}
