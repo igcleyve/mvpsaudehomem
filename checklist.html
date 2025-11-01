@@ -9,11 +9,12 @@
 <body>
 
     <header>
-        <h1><a href="index.html">Guia da Saúde do Homem</a></h1>
-        <nav>
+        <p class="site-title"><a href="index.html">Guia da Saúde do Homem</a></p>
+
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="prevencao.html">Prevenção</a></li>
+                <li><a href="prevencao.html" aria-current="page">Prevenção</a></li>
                 <li><a href="saude-mental.html">Saúde Mental</a></li>
             </ul>
         </nav>
@@ -21,18 +22,87 @@
 
     <main>
         <section class="container-prevencao">
-            <h2>Checklist e Desafios</h2>
+            <h1>Checklist e Desafios da Saúde Masculina</h1>
 
-            <article class="card-topico">
-                <h3>Exames</h3>
-                <h3>Desafios</h3>
-                <p>...</p>
-            </article>
+            <div class="intro-section">
+                <img src="https://via.placeholder.com/100" alt="Homem saudável" class="section-icon">
+                <p>Nesta página, você encontrará informações essenciais sobre exames preventivos e desafios comuns à saúde do homem, ajudando a promover um estilo de vida mais saudável e consciente.</p>
+            </div>
 
-            <article class="card-topico">
+            <section class="card-topico" id="exames">
+                <div class="card-header">
+                    <h2>Exames Essenciais</h2>
+                    <img src="https://via.placeholder.com/50" alt="Ícone de exame" class="card-icon">
+                </div>
+                <p>Mantenha sua saúde em dia com uma rotina de exames preventivos. Eles são cruciais para a detecção precoce de diversas condições.</p>
                 
-                <p>...</p>
-            </article>
+                <ul class="checklist-items">
+                    <li>
+                        <strong>Check-up Geral:</strong> Avaliação completa com exames de sangue e urina.
+                        <p class="item-description">Recomendado anualmente para monitorar glicemia, colesterol, função renal e hepática.</p>
+                    </li>
+                    <li>
+                        <strong>Antígeno Prostático Específico (PSA):</strong> Para detecção precoce de problemas na próstata.
+                        <p class="item-description">Geralmente a partir dos 45-50 anos, dependendo do histórico familiar.</p>
+                    </li>
+                    <li>
+                        <strong>Pressão Arterial:</strong> Monitoramento regular para prevenir hipertensão.
+                        <p class="item-description">Verificar em consultas de rotina ou em casa com aparelhos validados.</p>
+                    </li>
+                    <li>
+                        <strong>Colesterol e Triglicerídeos:</strong> Avaliação do perfil lipídico.
+                        <p class="item-description">Importante para prevenir doenças cardiovasculares.</p>
+                    </li>
+                    <li>
+                        <strong>Glicemia:</strong> Medição do açúcar no sangue para controle de diabetes.
+                        <p class="item-description">Fundamental para diagnóstico e controle do diabetes.</p>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary">Saiba Mais sobre Exames</a>
+            </section>
+
+            <section class="card-topico" id="desafios">
+                <div class="card-header">
+                    <h2>Desafios e Hábitos Saudáveis</h2>
+                    <img src="https://via.placeholder.com/50" alt="Ícone de desafio" class="card-icon">
+                </div>
+                <p>Enfrentar e superar desafios diários contribui significativamente para uma vida mais longa e saudável. Pequenas mudanças fazem uma grande diferença.</p>
+                
+                <ul class="checklist-items">
+                    <li>
+                        <strong>Atividade Física Regular:</strong> Pelo menos 30 minutos na maioria dos dias da semana.
+                        <p class="item-description">Ajuda a controlar o peso, melhora o humor e previne doenças crônicas.</p>
+                    </li>
+                    <li>
+                        <strong>Alimentação Balanceada:</strong> Priorize frutas, vegetais e grãos integrais.
+                        <p class="item-description">Evite alimentos processados, açúcares e gorduras saturadas em excesso.</p>
+                    </li>
+                    <li>
+                        <strong>Redução do Estresse:</strong> Pratique técnicas de relaxamento e hobbies.
+                        <p class="item-description">O estresse crônico afeta a saúde física e mental.</p>
+                    </li>
+                    <li>
+                        <strong>Sono de Qualidade:</strong> Garanta 7 a 9 horas de sono por noite.
+                        <p class="item-description">Essencial para a recuperação do corpo e mente.</p>
+                    </li>
+                    <li>
+                        <strong>Não Fumar e Moderar o Álcool:</strong> Hábitos que impactam diretamente a saúde.
+                        <p class="item-description">Reduz significativamente o risco de diversas doenças.</p>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-secondary">Receba Dicas de Saúde</a>
+            </section>
+
+            <section class="card-topico" id="recursos">
+                <h2>Recursos Adicionais</h2>
+                <p>Explore mais informações e ferramentas para cuidar da sua saúde.</p>
+                <ul class="resource-links">
+                    <li><a href="#">Guia Completo de Saúde Masculina (PDF)</a></li>
+                    <li><a href="#">Perguntas Frequentes sobre Prevenção</a></li>
+                    <li><a href="#">Encontre um Médico Próximo</a></li>
+                </ul>
+            </section>
+
         </section>
     </main>
 
