@@ -1,16 +1,16 @@
-/* --- Reset Básico e Estilos Globais --- */
+
 body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f7f6; /* Um fundo cinza/verde bem claro */
-    color: #333; /* Cor principal do texto */
+    background-color: #f4f7f6;
+    color: #333; 
     line-height: 1.6;
 }
 
-/* --- Estilização do Cabeçalho */
+/* Estilização do Cabeçalho */
 header {
-    background-color: #004d40; /* Um tom de verde escuro (bom para o tema "saúde") */
+    background-color: #004d40; 
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -79,4 +79,203 @@ header nav a:hover {
 .boas-vindas p {
     font-size: 1.1rem;
     color: #555;
+}
+
+/* ====================================================== */
+/* === ESTILOS DA PÁGINA DE PREVENÇÃO / CHECKLIST === */
+/* ====================================================== */
+
+/* O container principal desta página */
+.container-prevencao {
+    max-width: 960px; /* Largura máxima */
+    margin: 30px auto; /* Centraliza na tela */
+    padding: 20px;
+}
+
+/* O H1 de "Checklist e Desafios" */
+.container-prevencao > h1 {
+    text-align: center;
+    color: #004d40;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* A seção de introdução com ícone */
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #e8f5e9; /* Um verde bem clarinho */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.intro-section .section-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Deixa o ícone redondo */
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Estilo base para todos os "cards" de conteúdo */
+.card-topico {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+/* O cabeçalho de cada card (com H2 e ícone) */
+.card-header {
+    display: flex;
+    justify-content: space-between; /* H2 na esquerda, ícone na direita */
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: #004d40;
+    font-size: 1.8rem;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.card-topico > p { /* Parágrafo logo abaixo do título do card */
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Lista de "Exames" e "Hábitos" */
+.checklist-items {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist-items li {
+    background-color: #f9f9f9; /* Fundo cinza claro para cada item */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 4px solid #006a58; /* Destaque na borda esquerda */
+}
+
+.checklist-items li strong {
+    font-size: 1.1rem;
+    color: #333;
+    display: block; /* Faz o <strong> ocupar a linha toda */
+}
+
+/* A descrição menor dentro de cada item da lista */
+.item-description {
+    font-size: 0.95rem !important; /* !important força sobrepor outros estilos de <p> */
+    color: #666 !important;
+    margin: 5px 0 0 0 !important;
+    padding: 0 !important;
+}
+
+/* Botões ("Saiba Mais", "Receba Dicas") */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Efeito de levantar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #006a58; /* Cor do menu hover */
+}
+
+.btn-secondary {
+    background-color: #00796b; /* Outro tom de verde */
+}
+
+/* Lista de "Recursos Adicionais" */
+.resource-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resource-links li {
+    margin-bottom: 10px;
+}
+
+.resource-links a {
+    text-decoration: none;
+    color: #006a58;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.resource-links a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================================== */
+/* === ESTILOS DO CHECKLIST INTERATIVO (Sua nova ideia) === */
+/* ====================================================== */
+
+.desafio-grupo {
+    margin-top: 25px;
+    border-top: 1px solid #eee; /* Linha fina para separar os grupos */
+    padding-top: 20px;
+}
+
+.desafio-grupo h3 {
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.checklist-interativo {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist-interativo li {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    display: flex; /* Alinha o checkbox e o texto */
+    align-items: center;
+}
+
+.checklist-interativo input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    flex-shrink: 0; 
+}
+
+.checklist-interativo label {
+    cursor: pointer; /* Mouse vira "mãozinha" */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* O efeito de riscar o texto quando marcado */
+.checklist-interativo input[type="checkbox"]:checked + label {
+    color: #888;
+    text-decoration: line-through;
 }
