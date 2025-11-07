@@ -3,46 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style.css">
-    
     <title>Saúde Mental - Guia da Saúde do Homem</title>
 </head>
 <body>
 
     <header>
         <h1><a href="index.html">Guia da Saúde do Homem</a></h1>
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="prevencao.html">Prevenção</a></li>
-                <li><a href="saude-mental.html">Saúde Mental</a></li>
+                <li><a href="saude-mental.html" aria-current="page">Saúde Mental</a></li>
                 <li><a href="checklist.html">Checklist e Desafios</a></li>
+                <li><a href="login.html" class="login-link-nav">Login</a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
+
     <main>
-        <section class="container-prevencao">
-            <h1>Muitas vezes, os sinais de problemas de saúde mental nos homens são diferentes. Fique atento a mudanças persistentes</h1>
-        </section>
-    
-        <section class="container-prevencao">
+        <section class="container-prevencao"> 
             
-            <h2>Saúde Mental</h2>
-            <p>Criar um espaço seguro para o diálogo, reduzindo o estigma.</p>
+            <h1>Saúde Mental Masculina</h1>
 
-            <article class="card-topico">
-                <h3>Quebrando Tabus</h3>
-                <p>Falar sobre sentimentos não é fraqueza. É o primeiro...</p>
-            </article>
+            <div class="intro-section">
+                <p>Cuidar da mente é tão importante quanto cuidar do corpo. Vamos quebrar o tabu e falar abertamente sobre o bem-estar psicológico e emocional do homem.</p>
+            </div>
 
-            <article class="card-topico">
-                <h3>Sinais de Alerta</h3>
-                <p>Alguns sinais de que você deve procurar ajuda incluem...</p>
-            </article>
+            <section class="card-topico" id="sinais">
+                <div class="card-header">
+                    <h2>Sinais de Alerta</h2>
+                </div>
+                <p>Muitas vezes, os sinais de problemas de saúde mental nos homens são diferentes. Fique atento a mudanças persistentes:</p>
+                
+                <ul class="checklist-items">
+                    <li>
+                        <strong>Mudanças de Humor:</strong> Irritabilidade, raiva excessiva ou "pavio curto".
+                        <p class="item-description">Não é apenas tristeza; a agressividade pode ser um sinal de depressão.</p>
+                    </li>
+                    <li>
+                        <strong>Isolamento Social:</strong> Afastar-se de amigos, família e atividades que costumava gostar.
+                        <p class="item-description">Perder o interesse em hobbies ou no convívio social.</p>
+                    </li>
+                    <li>
+                        <strong>Alterações Físicas:</strong> Dores de cabeça, problemas digestivos ou cansaço extremo.
+                        <p class="item-description">O corpo muitas vezes reflete o estresse mental.</p>
+                    </li>
+                    <li>
+                        <strong>Comportamentos de Risco:</strong> Aumento no consumo de álcool/drogas ou direção imprudente.
+                        <p class="item-description">Usar substâncias como "fuga" ou muleta emocional.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card-topico" id="estrategias">
+                <div class="card-header">
+                    <h2>Estratégias de Cuidado (Quebrando Tabus)</h2>
+                </div>
+                <p>Pequenos hábitos diários podem fortalecer sua saúde mental. Falar sobre sentimentos não é fraqueza, é o primeiro passo.</p>
+                
+                <ul class="checklist-items">
+                    <li>
+                        <strong>Fale sobre Isso:</strong> Encontre alguém de confiança para desabafar.
+                        <p class="item-description">Guardar sentimentos aumenta a pressão. Conversar alivia.</p>
+                    </li>
+                    <li>
+                        <strong>Pratique Atividade Física:</strong> O exercício libera endorfinas.
+                        <p class="item-description">Uma caminhada regular é um poderoso antidepressivo natural.</p>
+                    </li>
+                    <li>
+                        <strong>Tenha um Hobby:</strong> Dedique tempo a algo que você gosta e que não seja trabalho.
+                        <p class="item-description">Isso ajuda a desligar a mente das preocupações diárias.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card-topico" id="ajuda">
+                <div class="card-header">
+                    <h2>Quando e Onde Buscar Ajuda?</h2>
+                </div>
+                <p>Buscar ajuda é um sinal de força. Se os sentimentos negativos persistirem e atrapalharem seu dia a dia, considere ajuda profissional.</p>
+                
+                <ul class="resource-links"> 
+                    <li><a href="#">Encontre um Psicólogo ou Psiquiatra</a></li>
+                    
+                </ul>
+
+                <a href="#" class="btn btn-primary">Saiba mais sobre Terapia</a>
+            </section>
 
         </section>
     </main>
-    
-    </body>
+
+</body>
 </html>
