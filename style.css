@@ -352,3 +352,66 @@ display: flex;
     border-radius: 5px;      
     margin-top: 20px;        /* Espaço para separar do texto acima */
 }
+
+
+/* ESTILIZAÇÃO DOS BLOCOS DA PAGINA INICIAL:" */
+.titulo-secao-home {
+    font-size: 1.8rem;
+    color: #004d40; 
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px; /* Espaço depois da msg de boas-vindas */
+    margin-bottom: 30px;
+}
+
+/* O "grid" que vai segurar os 3 cards */
+.grid-links-home {
+    display: grid;
+    /* Isso cria 3 colunas de tamanho igual */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Espaço entre os cards */
+}
+
+/* O card de link individual */
+.card-link-home {
+    display: block; /* Faz o link <a> se comportar como um bloco */
+    background-color: #f9f9f9; /* Fundo levemente cinza */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid #006a58; /* Destaque verde escuro */
+}
+
+/* Efeito de "levantar" o card ao passar o mouse */
+.card-link-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+/* Título de cada card (H4) */
+.card-link-home h4 {
+    font-size: 1.3rem;
+    color: #004d40; /* Título do card verde */
+    margin: 0 0 10px 0;
+}
+
+/* Texto descritivo de cada card (P) */
+.card-link-home p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --- Ajuste para Telas Pequenas (Celulares) --- */
+/* Esta parte é importante para o site funcionar bem no celular */
+@media (max-width: 768px) {
+    .grid-links-home {
+        /* Em telas pequenas, faz os cards ficarem um abaixo do outro */
+        grid-template-columns: 1fr;
+    }
+}
