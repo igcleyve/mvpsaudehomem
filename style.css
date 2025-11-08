@@ -415,3 +415,75 @@ display: flex;
         grid-template-columns: 1fr;
     }
 }
+
+.painel-rapido {
+    /* Reutiliza o estilo da "intro-section" */
+    background-color: #e8f5e9; 
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-top: 30px; /* Espaço após o "Bem-vindo" */
+    margin-bottom: 30px; /* Espaço antes do "Comece por aqui" */
+    border: 1px solid #d4e3d5;
+}
+
+.painel-rapido h3 {
+    margin: 0 0 20px 0;
+    color: #004d40;
+    font-size: 1.6rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #d4e3d5;
+}
+
+.painel-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.painel-lista li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Adiciona uma linha entre os itens */
+.painel-lista li + li {
+    border-top: 1px solid #d4e3d5;
+}
+
+.painel-icone {
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+.painel-texto {
+    flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+}
+
+.painel-texto strong {
+    display: block; /* Faz o título ficar em cima */
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.painel-texto span {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* O botão "Ir para o Checklist" */
+.painel-link {
+    background-color: #006a58;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+.painel-link:hover {
+    background-color: #004d40;
+}
