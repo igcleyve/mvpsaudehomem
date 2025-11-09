@@ -293,15 +293,28 @@ border-radius: 15px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 max-width: 900px;
 display: flex;
+width: 100%;
 }
 /*Coluna da esquerda do cadastro*/
 .login-form-area {
     padding: 40px;
-    flex-basis: 60px;
+    flex-basis: 60%;
     display: flex;
     flex-direction: column; /*emppilha os itens na vertical*/
     align-items: center;
+    text-align: left;
 }
+
+.login-form-area p {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.login-form-area p a {
+    color: #888; /* Define um cinza discreto */
+    text-decoration: none; /* Tira o sublinhado */
+}
+
 /*Coluna da Direita*/
 .login-side-promo {
     display: flex;
@@ -309,7 +322,7 @@ display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
-    flex-basis: 40px;
+    flex-basis: 40%;
     background-color: #004d40;
     color: white;
     
@@ -327,11 +340,11 @@ display: flex;
     color: white;
     border: none;
     padding: 12px;
-    border-radius: 20px; /* Arredondado como no modelo */
+    border-radius: 50px; /* Arredondado como no modelo */
     cursor: pointer;
     font-weight: bold;
     margin-top: 20px;
-    align-self: stretch;
+    width: 100%;
 }
 
 /*linha*/
@@ -347,7 +360,7 @@ display: flex;
     border-bottom-color: #004d40; /* <-- Use o seu verde escuro */
 }
 /* Estilo do link/botão "Cadastrar" na coluna verde */
-.login-side-promo  {
+.btn-cadastro-side {
     color: white;           
     text-decoration: none;  /* Remove o sublinhado */
     border: 1px solid white; /* A borda fina e branca */
