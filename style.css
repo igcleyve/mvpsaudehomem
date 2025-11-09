@@ -490,3 +490,41 @@ display: flex;
 .painel-link:hover {
     background-color: #004d40;
 }
+
+/*DEPOIMENTOS */
+.depoimentos {
+    margin-top: 40px; /* Espaço para separar dos cards de cima */
+}
+
+/* Criamos um grid para os depoimentos */
+.grid-depoimentos {
+    display: grid;
+    /* Reutilizamos a lógica de 3 colunas, igual ao .grid-links-home */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Espaço entre os cards */
+}
+
+.card-depoimento {
+    background-color: #f9f9f9; /* Um fundo cinza-claro */
+    border-radius: 5px;
+    padding: 25px;
+    /* Destaque de "citação" */
+    border-left: 5px solid #006a58; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.depoimento-texto {
+    font-size: 1.05rem;
+    color: #333;
+    font-style: italic; /* Itálico para parecer citação */
+    margin: 0 0 15px 0;
+    line-height: 1.6;
+}
+
+.depoimento-autor {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #004d40; /* Cor verde principal */
+    text-align: right; /* Alinha o autor à direita */
+    margin: 0;
+}
