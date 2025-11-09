@@ -541,3 +541,78 @@ width: 100%;
     text-align: right; /* Alinha o autor à direita */
     margin: 0;
 }
+
+/* PREVENCAO: PARTE DE QUANDO ME PREUCUPAR*/
+
+.toggle-list {
+    margin-top: 20px;
+}
+
+/* O card de toggle fechado */
+.toggle-list details {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* O título clicável (summary) */
+.toggle-list summary {
+    display: block; /* Remove o marcador de triângulo padrão */
+    cursor: pointer;
+    padding: 18px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #004d40; /* Cor do tema */
+    position: relative; /* Para posicionar o '+' */
+    transition: background-color 0.2s ease;
+}
+
+/* Remove o marcador (seta) em todos os navegadores */
+.toggle-list summary::-webkit-details-marker { display: none; }
+.toggle-list summary::marker { display: none; }
+
+.toggle-list summary:hover {
+    background-color: #f0f0f0;
+}
+
+/* Adiciona nosso próprio ícone '+' (fechado) */
+.toggle-list summary::after {
+    content: '+'; /* Sinal de mais */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    font-weight: 300; /* Uma fonte mais fina para o '+' */
+    color: #006a58;
+}
+
+/* Quando o card está aberto (details[open]) */
+.toggle-list details[open] summary {
+    border-bottom: 1px solid #d4e3d5; /* Linha que separa o título do conteúdo */
+}
+
+/* Muda o ícone para '−' (aberto) */
+.toggle-list details[open] summary::after {
+    content: '−'; /* Sinal de menos (UTF-8) */
+}
+
+/* O conteúdo que é revelado */
+.toggle-content {
+    padding: 20px;
+}
+
+.toggle-content p {
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Dá um destaque vermelho ao "Ação Imediata" */
+.toggle-content strong {
+    color: #c9302c; /* Um tom de vermelho alerta */
+    display: block;
+    margin-bottom: 5px;
+}
+
