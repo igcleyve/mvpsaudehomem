@@ -300,6 +300,7 @@ display: flex;
     flex-basis: 60px;
     display: flex;
     flex-direction: column; /*emppilha os itens na vertical*/
+    align-items: center;
 }
 /*Coluna da Direita*/
 .login-side-promo {
@@ -318,6 +319,7 @@ display: flex;
     display: flex;
     flex-direction: column;
     gap: 15px; /* Espaço entre os itens (email, senha) */
+    align-self: stretch;
 }
 
 .login-form-area button {
@@ -329,6 +331,7 @@ display: flex;
     cursor: pointer;
     font-weight: bold;
     margin-top: 20px;
+    align-self: stretch;
 }
 
 /*linha*/
