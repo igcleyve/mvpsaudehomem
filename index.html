@@ -4,100 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Guia da Saúde do Homem</title>
+    <title>Login saúde do Homem - Início</title>
 </head>
-<body>
-
-    <header>
-        <h1><a href="index.html">Guia da Saúde do Homem</a></h1>
-        <nav aria-label="Navegação principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Início</a></li>
-                <li><a href="prevencao.html">Prevenção</a></li>
-                <li><a href="saude-mental.html">Saúde Mental</a></li>
-                <li><a href="checklist.html">Checklist e Desafios</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main>
-            <section class="boas-vindas">
-                <h2>Bem-vindo ao nosso Guia</h2>
-                <p>Um espaço dedicado à saúde masculina, focado em prevenção, bem-estar mental e hábitos saudáveis.</p>
-            </section> 
-
-            <section class="painel-rapido">
-                <h3>Meu Painel</h3>
-                <ul class="painel-lista"> 
-                    <li>
-                        <span class="painel-icone">🔔</span>
-                        <div class="painel-texto">
-                            <strong>Próximo Lembrete:</strong>
-                            <span>(Simulado) Você tem um check-up agendado para 15 de Dezembro.</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="painel-icone">💧</span>
-                        <div class="painel-texto">
-                            <strong>Desafio Diário (Pendente):</strong>
-                            <span>Beber 2L de água.</span>
-                        </div>
-                        
-                </ul>
-            </section>
-
-            <section class="links-rapidos">
-                
-                
-                <h3 class="titulo-secao-home">Comece por aqui:</h3>
-                
-                
-                <div class="grid-links-home">
-
-                    <a href="prevencao.html" class="card-link-home">
-                        <h4>Prevenção e Acompanhamento</h4>
-                        <p>Descubra quais exames fazer e quando, e como se preparar para suas consultas.</p>
-                    </a>
-                    
-                    <a href="saude-mental.html" class="card-link-home">
-                        <h4>Saúde Mental</h4>
-                        <p>Quebre o tabu. Aprenda a identificar sinais de alerta e estratégias para cuidar da sua mente.</p>
-                    </a>
-                    
-                    <a href="checklist.html" class="card-link-home">
-                        <h4>Checklist e Desafios</h4>
-                        <p>Assuma o controle com nossos checklists interativos e desafios diários, semanais e mensais.</p>
-                    </a>
-
-                </div>
-
-            <section class="depoimentos">
-                    <h3 class="titulo-secao-home">O que dizem nossos usuários</h3>
-    
-                <div class="grid-depoimentos">
-        
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"Eu tinha vergonha de falar sobre ansiedade. A seção de Saúde Mental me mostrou que é normal e onde buscar ajuda. O estigma acabou para mim."</p>
-                    <p class="depoimento-autor">- J. Silva, 34 anos</p>
-                </div>
-        
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"O checklist interativo parece bobo, mas me ajudou a criar uma rotina. Estou me sentindo com muito mais energia e já subi no ranking!"</p>
-                    <p class="depoimento-autor">- M. Costa, 42 anos</p>
-                </div>
-
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"Usei a página de Prevenção para anotar as perguntas certas para meu médico. Cheguei na consulta muito mais preparado. Fez toda a diferença."</p>
-                    <p class="depoimento-autor">- R. Almeida, 51 anos</p>
-                </div>
-
-    </div>
-</section>
-            </section>
+    <body>
+    <main class="center-page"> <div class="login-container"> 
             
-        </main>
-    </div>
+            <div class="login-form-area">
+                <h2>Logar</h2>
+                <form id="login-form">
+                    <label for="email">Seu Email</label>
+                    <input type="email" id="email" name="email">
 
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password">
+
+                    <button type="submit" class="btn-login">LOGAR - CLIQUE AQUI</button>
+                </form>
+
+                <p><a href="#">Esqueceu sua senha?</a></p>
+                
+                <div class="social-icons">
+                    </div>
+            </div>
+
+            <div class="login-side-promo">
+                <div class="promo-content">
+                    <h3>Gostaria de Cadastrar?</h3>
+                    <p>Cadastre-se para ter acesso a conteúdos exclusivos</p>
+                    <a href="cadastro.html" class="btn-cadastro-side">CADASTRAR</a>
+                </div>
+                </div>
+
+        </div>
+    </main>
+    </body>
 </body>
 </html>

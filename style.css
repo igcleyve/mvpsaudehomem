@@ -285,6 +285,8 @@ header nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #b7f0ed; /* Cor de fundo (caso o gradiente falhe) */
+    background-image: radial-gradient(circle, #7f9c94, #97e4e0); /* Gradiente de branco para verde-água */
 }
 
 .login-container {
@@ -294,6 +296,7 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 max-width: 900px;
 display: flex;
 width: 100%;
+overflow: hidden;
 }
 /*Coluna da esquerda do cadastro*/
 .login-form-area {
@@ -323,7 +326,9 @@ width: 100%;
     justify-content: center;
     padding: 40px;
     flex-basis: 40%;
-    background-color: #004d40;
+    background-image: url('teclado.jpg'); /* 1. O caminho para a imagem */
+    background-size: cover;               /* 2. Garante que a imagem cubra toda a área */
+    background-position: center;          /* 3. Centraliza a imagem no fundo */
     color: white;
     
 }
