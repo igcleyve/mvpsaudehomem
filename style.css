@@ -621,3 +621,43 @@ overflow: hidden;
     margin-bottom: 5px;
 }
 
+/* ====================================================== */
+/* === AJUSTE: CENTRALIZAR SEÇÃO "MEU CHECKLIST PESSOAL" === */
+/* ====================================================== */
+
+#meus-desafios {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#meus-desafios .card-header {
+    justify-content: center; /* Centraliza o título e o ícone */
+}
+
+#meus-desafios .card-header h2 {
+    font-size: 2rem;
+}
+
+#meus-desafios .desafio-grupo {
+    margin-bottom: 25px;
+}
+
+#meus-desafios ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+#meus-desafios li {
+    margin: 8px 0;
+}
+
+#meus-desafios input[type="checkbox"] {
+    margin-right: 10px;
+}
