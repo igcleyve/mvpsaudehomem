@@ -661,3 +661,26 @@ overflow: hidden;
 #meus-desafios input[type="checkbox"] {
     margin-right: 10px;
 }
+
+.progresso-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#barraProgresso {
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+#textoProgresso {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
