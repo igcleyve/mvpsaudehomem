@@ -14,9 +14,9 @@
         <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="home.html">Início</a></li>
-                <li><a href="prevencao.html" aria-current="page">Prevenção</a></li>
+                <li><a href="prevencao.html">Prevenção</a></li>
                 <li><a href="saude-mental.html">Saúde Mental</a></li>
-                <li><a href="checklist.html">Checklist e Desafios</a></li>
+                <li><a href="checklist.html" aria-current="page">Checklist e Desafios</a></li>
             </ul>
         </nav>
     </header>
@@ -31,94 +31,57 @@
             </div>
 
             <section class="card-topico" id="exames">
-    <div class="card-header">
-        <h2>Exames Essenciais</h2>
-        <img src="https://via.placeholder.com/50" alt="Ícone de exame" class="card-icon">
-    </div>
-    <p>Mantenha sua saúde em dia com uma rotina de exames preventivos. Eles são cruciais para a detecção precoce de diversas condições.</p>
-
-    <ul class="checklist-exames">
-        <li>
-            <input type="checkbox" id="exame-1">
-            <label for="exame-1"><strong>Check-up Geral:</strong> Avaliação completa com exames de sangue e urina.</label>
-            <p class="item-description">Recomendado anualmente para monitorar glicemia, colesterol, função renal e hepática.</p>
-        </li>
-        <li>
-            <input type="checkbox" id="exame-2">
-            <label for="exame-2"><strong>Antígeno Prostático Específico (PSA):</strong> Para detecção precoce de problemas na próstata.</label>
-            <p class="item-description">Geralmente a partir dos 45-50 anos, dependendo do histórico familiar.</p>
-        </li>
-        <li>
-            <input type="checkbox" id="exame-3">
-            <label for="exame-3"><strong>Pressão Arterial:</strong> Monitoramento regular para prevenir hipertensão.</label>
-            <p class="item-description">Verificar em consultas de rotina ou em casa com aparelhos validados.</p>
-        </li>
-        <li>
-            <input type="checkbox" id="exame-4">
-            <label for="exame-4"><strong>Colesterol e Triglicerídeos:</strong> Avaliação do perfil lipídico.</label>
-            <p class="item-description">Importante para prevenir doenças cardiovasculares.</p>
-        </li>
-        <li>
-            <input type="checkbox" id="exame-5">
-            <label for="exame-5"><strong>Glicemia:</strong> Medição do açúcar no sangue para controle de diabetes.</label>
-            <p class="item-description">Fundamental para diagnóstico e controle do diabetes.</p>
-        </li>
-    </ul>
-
-    <!-- Barra de progresso -->
-    <div class="progresso-container">
-        <div id="barraExames"></div>
-    </div>
-    <p id="textoExames">0% dos exames concluídos</p>
-
-    <a href="#" class="btn btn-primary">Saiba Mais sobre Exames</a>
-</section>
-
-
-            <section class="card-topico" id="desafios">
                 <div class="card-header">
-                    <h2>Desafios e Hábitos Saudáveis</h2>
-                    
+                    <h2>Exames Essenciais</h2>
+                    <img src="https://via.placeholder.com/50" alt="Ícone de exame" class="card-icon">
                 </div>
-                <p>Enfrentar e superar desafios diários contribui significativamente para uma vida mais longa e saudável. Pequenas mudanças fazem uma grande diferença.</p>
-                
-                <ul class="checklist-items">
+                <p>Mantenha sua saúde em dia com uma rotina de exames preventivos...</p>
+
+                <ul class="checklist-exames">
                     <li>
-                        <strong>Atividade Física Regular:</strong> Pelo menos 30 minutos na maioria dos dias da semana.
-                        <p class="item-description">Ajuda a controlar o peso, melhora o humor e previne doenças crônicas.</p>
+                        <input type="checkbox" id="exame-1">
+                        <label for="exame-1"><strong>Check-up Geral:</strong> Avaliação completa com exames de sangue e urina.</label>
+                        <p class="item-description">Recomendado anualmente para monitorar glicemia, colesterol, função renal e hepática.</p>
                     </li>
                     <li>
-                        <strong>Alimentação Balanceada:</strong> Priorize frutas, vegetais e grãos integrais.
-                        <p class="item-description">Evite alimentos processados, açúcares e gorduras saturadas em excesso.</p>
+                        <input type="checkbox" id="exame-2">
+                        <label for="exame-2"><strong>Antígeno Prostático Específico (PSA):</strong> Para detecção precoce de problemas na próstata.</label>
+                        <p class="item-description">Geralmente a partir dos 45-50 anos, dependendo do histórico familiar.</p>
                     </li>
                     <li>
-                        <strong>Redução do Estresse:</strong> Pratique técnicas de relaxamento e hobbies.
-                        <p class="item-description">O estresse crônico afeta a saúde física e mental.</p>
+                        <input type="checkbox" id="exame-3">
+                        <label for="exame-3"><strong>Pressão Arterial:</strong> Monitoramento regular para prevenir hipertensão.</label>
+                        <p class="item-description">Verificar em consultas de rotina ou em casa com aparelhos validados.</p>
                     </li>
                     <li>
-                        <strong>Sono de Qualidade:</strong> Garanta 7 a 9 horas de sono por noite.
-                        <p class="item-description">Essencial para a recuperação do corpo e mente.</p>
+                        <input type="checkbox" id="exame-4">
+                        <label for="exame-4"><strong>Colesterol e Triglicerídeos:</strong> Avaliação do perfil lipídico.</label>
+                        <p class="item-description">Importante para prevenir doenças cardiovasculares.</p>
                     </li>
                     <li>
-                        <strong>Não Fumar e Moderar o Álcool:</strong> Hábitos que impactam diretamente a saúde.
-                        <p class="item-description">Reduz significativamente o risco de diversas doenças.</p>
+                        <input type="checkbox" id="exame-5">
+                        <label for="exame-5"><strong>Glicemia:</strong> Medição do açúcar no sangue para controle de diabetes.</label>
+                        <p class="item-description">Fundamental para diagnóstico e controle do diabetes.</p>
                     </li>
                 </ul>
-                
-            </section>
 
+                <div class="progresso-container">
+                    <div id="barraExames"></div>
+                </div>
+                <p id="textoExames">0% dos exames concluídos</p>
+
+                <a href="#" class="btn btn-primary">Saiba Mais sobre Exames</a>
             </section>
 
             <section class="card-topico" id="meus-desafios">
                 <div class="card-header">
                     <h2>Meu Checklist Pessoal</h2>
-                    
                 </div>
                 <p>Use este espaço para marcar suas conquistas e construir hábitos saudáveis.</p>
 
                 <div class="desafio-grupo">
                     <h3>Desafios Diários</h3>
-                    <ul class="checklist-interativo">
+                    <ul class="checklist-interativo" id="lista-diario">
                         <li>
                             <input type="checkbox" id="diario-1" name="diario-1">
                             <label for="diario-1">Beber 2 litros de água</label>
@@ -140,14 +103,14 @@
 
                 <div class="desafio-grupo">
                     <h3>Desafios Semanais</h3>
-                    <ul class="checklist-interativo">
+                    <ul class="checklist-interativo" id="lista-semanal">
                         <li>
                             <input type="checkbox" id="semanal-1" name="semanal-1">
-                            <label for="semanal-1">Praticar 2x exercícios de força (ex: musculação)</label>
+                            <label for="semanal-1">Praticar 3x exercícios (ex: musculação, corrida)</label>
                         </li>
                         <li>
                             <input type="checkbox" id="semanal-2" name="semanal-2">
-                            <label for="semanal-2">Tirar um tempo para um hobby</label>
+                            <label for="semanal-2">Tirar um tempo para um hobby(Livro, tocar um instrumento)</label>
                         </li>
                         <li>
                             <input type="checkbox" id="semanal-3" name="semanal-3">
@@ -158,14 +121,14 @@
 
                 <div class="desafio-grupo">
                     <h3>Desafios Mensais</h3>
-                    <ul class="checklist-interativo">
+                    <ul class="checklist-interativo" id="lista-mensal">
                         <li>
                             <input type="checkbox" id="mensal-1" name="mensal-1">
                             <label for="mensal-1">Revisar metas pessoais e profissionais</label>
                         </li>
                         <li>
                             <input type="checkbox" id="mensal-2" name="mensal-2">
-                            <label for="mensal-2">Verificar agendamento de check-up médico/dentista</label>
+                            <label for="mensal-2">Verificar agendamento de check-up</label>
                         </li>
                         <li>
                             <input type="checkbox" id="mensal-3" name="mensal-3">
@@ -173,88 +136,131 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="desafio-grupo" id="desafio-custom">
+                    <h3>Adicionar Meu Próprio Desafio</h3>
+                    <form id="desafio-form">
+                        <label for="desafio-nome">Nome do Desafio:</label>
+                        <input type="text" id="desafio-nome" placeholder="Ex: Ler 10 páginas de um livro" required>
+                        
+                        <label for="desafio-tipo">Tipo:</label>
+                        <select id="desafio-tipo">
+                            <option value="diario">Diário</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensal">Mensal</option>
+                        </select>
+                        
+                        <div id="desafio-success" class="success-text"></div>
+                        <button type="submit" class="btn btn-secondary">Adicionar Desafio</button>
+                    </form>
+                </div>
             </section>
             
             <section class="card-topico" id="recursos"></section>
 
-           
-
-        </section>
-    </main>
-        <script>
-    // Seleciona todos os checkboxes dos desafios
-    const checkboxes = document.querySelectorAll('.checklist-interativo input[type="checkbox"]');
-    const barra = document.createElement('div');
-    const texto = document.createElement('p');
-
-    // Cria container da barra de progresso
-    const progressoContainer = document.createElement('div');
-    progressoContainer.classList.add('progresso-container');
-    barra.id = 'barraProgresso';
-    texto.id = 'textoProgresso';
-    texto.textContent = '0% concluído';
-
-    progressoContainer.appendChild(barra);
-    document.querySelector('#meus-desafios').appendChild(progressoContainer);
-    document.querySelector('#meus-desafios').appendChild(texto);
-
-    // Função para atualizar a barra e salvar o estado
-    function atualizarProgresso() {
-        const total = checkboxes.length;
-        const marcados = Array.from(checkboxes).filter(c => c.checked).length;
-        const porcentagem = Math.round((marcados / total) * 100);
-
-        // Atualiza a barra e o texto
-        barra.style.width = porcentagem + '%';
-        texto.textContent = porcentagem + '% concluído';
-
-        // Salva no localStorage
-        checkboxes.forEach((c, i) => {
-            localStorage.setItem('desafio-' + i, c.checked);
+        </section> </main>
+    
+    <script>
+        // O teu primeiro script (barra de progresso dos desafios + adicionar desafio)
+        // ... (todo o código do script 1) ...
+        let checkboxes = document.querySelectorAll('.checklist-interativo input[type="checkbox"]');
+        const barra = document.createElement('div');
+        const texto = document.createElement('p');
+        const progressoContainer = document.createElement('div');
+        progressoContainer.classList.add('progresso-container');
+        barra.id = 'barraProgresso';
+        texto.id = 'textoProgresso';
+        texto.textContent = '0% concluído';
+        progressoContainer.appendChild(barra);
+        document.querySelector('#meus-desafios').appendChild(progressoContainer);
+        document.querySelector('#meus-desafios').appendChild(texto);
+        function atualizarProgresso() {
+            checkboxes = document.querySelectorAll('.checklist-interativo input[type="checkbox"]');
+            const total = checkboxes.length;
+            const marcados = Array.from(checkboxes).filter(c => c.checked).length;
+            const porcentagem = (total > 0) ? Math.round((marcados / total) * 100) : 0;
+            barra.style.width = porcentagem + '%';
+            texto.textContent = porcentagem + '% concluído';
+            checkboxes.forEach((c) => {
+                localStorage.setItem('desafio-' + c.id, c.checked);
+            });
+        }
+        function restaurarEstado() {
+            checkboxes.forEach((c) => {
+                const salvo = localStorage.getItem('desafio-' + c.id);
+                if (salvo === 'true') c.checked = true;
+                c.addEventListener('change', atualizarProgresso);
+            });
+        }
+        const desafioForm = document.getElementById('desafio-form');
+        const desafioNomeInput = document.getElementById('desafio-nome');
+        const desafioTipoSelect = document.getElementById('desafio-tipo');
+        const desafioSuccess = document.getElementById('desafio-success');
+        function adicionarDesafioNaTela(nome, tipo, idDesafio) {
+            const listaCorreta = document.getElementById(`lista-${tipo}`);
+            const novoLi = document.createElement('li');
+            novoLi.innerHTML = `
+                <input type="checkbox" id="${idDesafio}" name="${idDesafio}">
+                <label for="${idDesafio}">${nome} (Adicionado)</label>
+            `;
+            listaCorreta.appendChild(novoLi);
+            const novoCheckbox = document.getElementById(idDesafio);
+            novoCheckbox.addEventListener('change', atualizarProgresso);
+        }
+        function carregarDesafios() {
+            const desafiosSalvos = JSON.parse(localStorage.getItem('meusDesafios')) || [];
+            desafiosSalvos.forEach(desafio => {
+                adicionarDesafioNaTela(desafio.nome, desafio.tipo, desafio.id);
+            });
+        }
+        function salvarDesafio(nome, tipo, idDesafio) {
+            const desafiosSalvos = JSON.parse(localStorage.getItem('meusDesafios')) || [];
+            desafiosSalvos.push({ nome: nome, tipo: tipo, id: idDesafio });
+            localStorage.setItem('meusDesafios', JSON.stringify(desafiosSalvos));
+        }
+        desafioForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const nome = desafioNomeInput.value;
+            const tipo = desafioTipoSelect.value;
+            const idDesafio = `custom-${tipo}-${Date.now()}`;
+            adicionarDesafioNaTela(nome, tipo, idDesafio);
+            salvarDesafio(nome, tipo, idDesafio);
+            atualizarProgresso();
+            desafioSuccess.textContent = '✅ Desafio adicionado com sucesso!';
+            desafioSuccess.style.display = 'block';
+            desafioForm.reset();
+            setTimeout(() => {
+                desafioSuccess.style.display = 'none';
+            }, 4000);
         });
-    }
+        carregarDesafios();
+        restaurarEstado();
+        atualizarProgresso();
+    </script>
 
-    // Restaura o estado salvo no carregamento
-    checkboxes.forEach((c, i) => {
-        const salvo = localStorage.getItem('desafio-' + i);
-        if (salvo === 'true') c.checked = true;
-        c.addEventListener('change', atualizarProgresso);
-    });
-
-    // Atualiza progresso ao carregar
-    atualizarProgresso();
-</script>
-
-<script>
-    // Interação dos checkboxes dos exames
-    const exames = document.querySelectorAll('.checklist-exames input[type="checkbox"]');
-    const barraExames = document.getElementById('barraExames');
-    const textoExames = document.getElementById('textoExames');
-
-    function atualizarProgressoExames() {
-        const total = exames.length;
-        const marcados = Array.from(exames).filter(e => e.checked).length;
-        const porcentagem = Math.round((marcados / total) * 100);
-
-        barraExames.style.width = porcentagem + '%';
-        textoExames.textContent = `${porcentagem}% dos exames concluídos`;
-
-        // Salvar estado no localStorage
+    <script>
+        // O teu segundo script (barra de progresso dos exames)
+        // ... (todo o código do script 2) ...
+        const exames = document.querySelectorAll('.checklist-exames input[type="checkbox"]');
+        const barraExames = document.getElementById('barraExames');
+        const textoExames = document.getElementById('textoExames');
+        function atualizarProgressoExames() {
+            const total = exames.length;
+            const marcados = Array.from(exames).filter(e => e.checked).length;
+            const porcentagem = (total > 0) ? Math.round((marcados / total) * 100) : 0;
+            barraExames.style.width = porcentagem + '%';
+            textoExames.textContent = `${porcentagem}% dos exames concluídos`;
+            exames.forEach((e, i) => {
+                localStorage.setItem('exame-' + i, e.checked);
+            });
+        }
         exames.forEach((e, i) => {
-            localStorage.setItem('exame-' + i, e.checked);
+            const salvo = localStorage.getItem('exame-' + i);
+            if (salvo === 'true') e.checked = true;
+            e.addEventListener('change', atualizarProgressoExames);
         });
-    }
-
-    // Restaurar estado salvo
-    exames.forEach((e, i) => {
-        const salvo = localStorage.getItem('exame-' + i);
-        if (salvo === 'true') e.checked = true;
-        e.addEventListener('change', atualizarProgressoExames);
-    });
-
-    atualizarProgressoExames();
-</script>
-
+        atualizarProgressoExames();
+    </script>
 
 </body>
 </html>
