@@ -684,3 +684,12 @@ overflow: hidden;
     margin-top: 5px;
     color: #333;
 }
+
+
+/* Estilo da Mensagem de Sucesso do Cadastro */
+.success-text {
+    color: #006a58; /* Verde do teu tema */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
