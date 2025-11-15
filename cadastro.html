@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
     <body>
     <main class="center-page"> 
@@ -13,7 +15,8 @@
             <div class="login-form-area">
                 <h2>Criar Conta</h2>
                 
-                <form id="register-form"> <label for="name">Seu Nome</label>
+                <form id="register-form"> 
+                    <label for="name">Seu Nome</label>
                     <input type="text" id="name" name="name" required>
 
                     <label for="email">Seu Email</label>
@@ -24,6 +27,9 @@
                     
                     <label for="password-confirm">Confirmar Senha</label>
                     <input type="password" id="password-confirm" name="password-confirm" required>
+
+                    <div id="error-message" class="error-text"></div>
+                    <div id="success-message" class="success-text"></div>
 
                     <button type="submit" class="btn-login">CADASTRAR</button> 
                 </form>
@@ -36,10 +42,15 @@
 
             <div class="login-side-promo">
                 <div class="promo-content">
-                    <h3>Já é cadastrado?</h3> <p>Faça login para ter acesso ao seu guia e desafios.</p> <a href="login.html" class="btn-cadastro-side">FAZER LOGIN</a> </div>
+                    <h3>Já é cadastrado?</h3> 
+                    <p>Faça login para ter acesso ao seu guia e desafios.</p> 
+                    <a href="index.html" class="btn-cadastro-side">FAZER LOGIN</a> 
+                </div>
             </div>
 
         </div>
     </main>
+    
+    <script src="register.js" defer></script>
 </body>
 </html>
