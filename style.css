@@ -693,3 +693,128 @@ overflow: hidden;
     text-align: center;
     margin: 10px 0;
 }
+
+
+
+
+/* ===    ESTILOS DO "GERENCIADOR DE LEMBRETES" (PREV)  === */
+
+
+#lembrete-form {
+    margin-top: 20px;
+}
+
+/* Formata os campos de texto e data */
+#lembrete-form input[type="text"],
+#lembrete-form input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+/* Formata os rótulos (labels) */
+#lembrete-form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Esconde a mensagem de sucesso (para só aparecer com JS) */
+#lembrete-success {
+    display: none;
+    margin-bottom: 15px;
+}
+
+/* O botão de submit (usando classes que já existem) */
+#lembrete-form button {
+    width: 100%; /* Faz o botão ocupar a largura toda */
+    font-size: 1.1rem;
+}
+
+/* ====================================================== */
+/* ===    ESTILOS DA LISTA DE LEMBRETES SALVOS (PREV)   === */
+/* ====================================================== */
+
+#lista-lembretes-container {
+    margin-top: 20px;
+    margin-bottom: 30px; /* Separa a lista do formulário */
+}
+
+/* Formato de cada item salvo na lista */
+.item-lembrete {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #006a58; /* Borda verde (tema) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.item-lembrete-texto strong {
+    font-size: 1.1rem;
+    color: #333;
+    display: block; /* Nome em cima */
+}
+
+.item-lembrete-texto span {
+    font-size: 0.95rem;
+    color: #555; /* Data em baixo */
+}
+
+/* Botão de apagar (opcional, mas muito bom) */
+.item-lembrete-apagar {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #b91c1c; /* Vermelho */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.item-lembrete-apagar:hover {
+    transform: scale(1.2);
+}
+
+/* ====================================================== */
+/* ===    ESTILOS DO FORMULÁRIO DE NOVOS DESAFIOS     === */
+/* ====================================================== */
+
+#desafio-form {
+    margin-top: 20px;
+}
+
+/* Formata os campos de texto e select */
+#desafio-form input[type="text"],
+#desafio-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#desafio-form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#desafio-success {
+    display: none;
+    margin-bottom: 15px;
+}
+
+#desafio-form button {
+    width: 100%;
+    font-size: 1.1rem;
+}

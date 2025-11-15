@@ -83,6 +83,29 @@
                 <a href="saude-mental.html" class="btn btn-secondary">Veja também Saúde Mental</a>
             </section>
 
+            <section class="card-topico" id="gerenciar-lembretes">
+                <div class="card-header">
+                    <h2>Gerenciar Meus Lembretes</h2>
+                </div>
+                <p>Use esta ferramenta para agendar lembretes para os seus próximos exames.</p>
+
+                <div id="lista-lembretes-container">
+                    </div>
+
+                <form id="lembrete-form">
+                    
+                    <label for="lembrete-nome">Tipo de Exame:</label>
+                    <input type="text" id="lembrete-nome" placeholder="Ex: Check-up Geral, Dentista..." required>
+
+                    <label for="lembrete-data">Data do Lembrete:</label>
+                    <input type="date" id="lembrete-data" required>
+                    
+                    <div id="lembrete-success" class="success-text"></div>
+
+                    <button type="submit" class="btn btn-primary">Salvar Lembrete</button>
+
+                </form>
+            </section>
             <section class="card-topico" id="sinais-alerta">
                 <div class="card-header">
                     <h2>Quando me preocupar? (Sinais de Alerta)</h2>
@@ -122,8 +145,111 @@
                 </div>
             </section>
 
-        </section> 
-    </main>
+        </section> </main>
+
+    <script>
+        // 1. Seleciona os elementos do formulário e da lista
+        const lembreteForm = document.getElementById('lembrete-form');
+        const lembreteNomeInput = document.getElementById('lembrete-nome');
+        const lembreteDataInput = document.getElementById('lembrete-data');
+        const lembreteSuccess = document.getElementById('lembrete-success');
+        const listaContainer = document.getElementById('lista-lembretes-container');
+
+        // 2. Função para formatar a data (AAAA-MM-DD -> DD/MM/AAAA)
+        function formatarData(data) {
+            const [ano, mes, dia] = data.split('-');
+            return `${dia}/${mes}/${ano}`;
+        }
+
+        // 3. Função para adicionar um item de lembrete na tela
+        function adicionarLembreteNaTela(nome, data) {
+            const dataFormatada = formatarData(data);
+
+            const divLembrete = document.createElement('div');
+            divLembrete.className = 'item-lembrete';
+            
+            // Guarda os dados no elemento (para ser fácil de apagar)
+            divLembrete.dataset.nome = nome;
+            divLembrete.dataset.data = data;
+
+            divLembrete.innerHTML = `
+                <div class="item-lembrete-texto">
+                    <strong>${nome}</strong>
+                    <span>${dataFormatada}</span>
+                </div>
+                <button class="item-lembrete-apagar" title="Apagar lembrete">X</button>
+            `;
+
+            // Adiciona o novo lembrete à lista na tela
+            listaContainer.appendChild(divLembrete);
+        }
+
+        // 4. Função para carregar lembretes do localStorage
+        function carregarLembretes() {
+            const lembretesSalvos = JSON.parse(localStorage.getItem('meusLembretes')) || [];
+            listaContainer.innerHTML = ''; // Limpa a lista antes de carregar
+            lembretesSalvos.forEach(lembrete => {
+                adicionarLembreteNaTela(lembrete.nome, lembrete.data);
+            });
+        }
+
+        // 5. Função para salvar o lembrete no localStorage
+        function salvarLembrete(nome, data) {
+            const lembretesSalvos = JSON.parse(localStorage.getItem('meusLembretes')) || [];
+            lembretesSalvos.push({ nome: nome, data: data });
+            localStorage.setItem('meusLembretes', JSON.stringify(lembretesSalvos));
+        }
+
+        // 6. Função para apagar o lembrete
+        function apagarLembrete(nome, data) {
+            let lembretesSalvos = JSON.parse(localStorage.getItem('meusLembretes')) || [];
+            // Filtra o array, removendo o item que queremos apagar
+            lembretesSalvos = lembretesSalvos.filter(l => l.nome !== nome || l.data !== data);
+            // Salva o novo array (sem o item)
+            localStorage.setItem('meusLembretes', JSON.stringify(lembretesSalvos));
+            // Recarrega a lista na tela
+            carregarLembretes();
+        }
+
+        // 7. Event Listener do Formulário (O que acontece ao clicar em "Salvar")
+        lembreteForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede a página de recarregar
+
+            // Pega os valores
+            const nome = lembreteNomeInput.value;
+            const data = lembreteDataInput.value;
+
+            // Adiciona na tela
+            adicionarLembreteNaTela(nome, data);
+            
+            // Salva no localStorage
+            salvarLembrete(nome, data);
+
+            // Mostra a mensagem de sucesso
+            lembreteSuccess.textContent = '✅ Lembrete salvo com sucesso!';
+            lembreteSuccess.style.display = 'block';
+            lembreteForm.reset(); // Limpa o formulário
+
+            setTimeout(() => {
+                lembreteSuccess.style.display = 'none';
+            }, 4000);
+        });
+
+        // 8. Event Listener para os botões de APAGAR
+        listaContainer.addEventListener('click', (event) => {
+            // Verifica se o clique foi no botão de apagar
+            if (event.target.classList.contains('item-lembrete-apagar')) {
+                const item = event.target.closest('.item-lembrete');
+                const nome = item.dataset.nome;
+                const data = item.dataset.data;
+                apagarLembrete(nome, data);
+            }
+        });
+
+        // 9. CARREGA TUDO: Chama a função para carregar os lembretes assim que a página abre
+        carregarLembretes();
+
+    </script>
 
 </body>
 </html>
