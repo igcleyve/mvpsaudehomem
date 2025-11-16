@@ -161,8 +161,8 @@
         </section> </main>
     
     <script>
-        // O teu primeiro script (barra de progresso dos desafios + adicionar desafio)
-        // ... (todo o código do script 1) ...
+        // --- PARTE 1: LÓGICA DA BARRA DE PROGRESSO ---
+        
         let checkboxes = document.querySelectorAll('.checklist-interativo input[type="checkbox"]');
         const barra = document.createElement('div');
         const texto = document.createElement('p');
@@ -174,6 +174,7 @@
         progressoContainer.appendChild(barra);
         document.querySelector('#meus-desafios').appendChild(progressoContainer);
         document.querySelector('#meus-desafios').appendChild(texto);
+
         function atualizarProgresso() {
             checkboxes = document.querySelectorAll('.checklist-interativo input[type="checkbox"]');
             const total = checkboxes.length;
@@ -185,6 +186,7 @@
                 localStorage.setItem('desafio-' + c.id, c.checked);
             });
         }
+
         function restaurarEstado() {
             checkboxes.forEach((c) => {
                 const salvo = localStorage.getItem('desafio-' + c.id);
@@ -192,32 +194,65 @@
                 c.addEventListener('change', atualizarProgresso);
             });
         }
+
+        // --- PARTE 2: LÓGICA DE ADICIONAR NOVOS DESAFIOS ---
+
         const desafioForm = document.getElementById('desafio-form');
         const desafioNomeInput = document.getElementById('desafio-nome');
         const desafioTipoSelect = document.getElementById('desafio-tipo');
         const desafioSuccess = document.getElementById('desafio-success');
+        const meusDesafiosCard = document.querySelector('#meus-desafios'); // Seleciona o card pai
+
+        // ATUALIZADO: Adiciona o botão 'X' ao HTML
         function adicionarDesafioNaTela(nome, tipo, idDesafio) {
             const listaCorreta = document.getElementById(`lista-${tipo}`);
             const novoLi = document.createElement('li');
             novoLi.innerHTML = `
                 <input type="checkbox" id="${idDesafio}" name="${idDesafio}">
                 <label for="${idDesafio}">${nome} (Adicionado)</label>
+                <button class="desafio-apagar" title="Apagar desafio">X</button>
             `;
             listaCorreta.appendChild(novoLi);
             const novoCheckbox = document.getElementById(idDesafio);
             novoCheckbox.addEventListener('change', atualizarProgresso);
         }
+
         function carregarDesafios() {
             const desafiosSalvos = JSON.parse(localStorage.getItem('meusDesafios')) || [];
             desafiosSalvos.forEach(desafio => {
                 adicionarDesafioNaTela(desafio.nome, desafio.tipo, desafio.id);
             });
         }
+
         function salvarDesafio(nome, tipo, idDesafio) {
             const desafiosSalvos = JSON.parse(localStorage.getItem('meusDesafios')) || [];
             desafiosSalvos.push({ nome: nome, tipo: tipo, id: idDesafio });
             localStorage.setItem('meusDesafios', JSON.stringify(desafiosSalvos));
         }
+        
+        // =============================================
+        // ===         NOVA FUNÇÃO DE APAGAR         ===
+        // =============================================
+        function apagarDesafio(idDesafio) {
+            // 1. Remove do localStorage (a lista de desafios)
+            let desafiosSalvos = JSON.parse(localStorage.getItem('meusDesafios')) || [];
+            desafiosSalvos = desafiosSalvos.filter(d => d.id !== idDesafio);
+            localStorage.setItem('meusDesafios', JSON.stringify(desafiosSalvos));
+
+            // 2. Remove o estado (marcado/desmarcado) do localStorage
+            localStorage.removeItem('desafio-' + idDesafio);
+
+            // 3. Remove da tela (do DOM)
+            const checkbox = document.getElementById(idDesafio);
+            if (checkbox) {
+                checkbox.closest('li').remove();
+            }
+
+            // 4. Atualiza a barra de progresso
+            atualizarProgresso();
+        }
+        // =============================================
+
         desafioForm.addEventListener('submit', (event) => {
             event.preventDefault();
             const nome = desafioNomeInput.value;
@@ -233,33 +268,28 @@
                 desafioSuccess.style.display = 'none';
             }, 4000);
         });
+
+        // Usa "Event Delegation" para ouvir cliques em todo o card
+        meusDesafiosCard.addEventListener('click', (event) => {
+            // Verifica se o que foi clicado foi um botão com a classe 'desafio-apagar'
+            if (event.target.classList.contains('desafio-apagar')) {
+                
+                // Encontra o 'li' pai e depois o checkbox para pegar o ID
+                const checkbox = event.target.closest('li').querySelector('input[type="checkbox"]');
+                const idDesafio = checkbox.id;
+                
+                // Pede confirmação
+                if (confirm('Tem a certeza que quer apagar este desafio?')) {
+                    apagarDesafio(idDesafio);
+                }
+            }
+        });
+        // =============================================
+        
+        // CARREGA TUDO
         carregarDesafios();
         restaurarEstado();
         atualizarProgresso();
-    </script>
-
-    <script>
-        // O teu segundo script (barra de progresso dos exames)
-        // ... (todo o código do script 2) ...
-        const exames = document.querySelectorAll('.checklist-exames input[type="checkbox"]');
-        const barraExames = document.getElementById('barraExames');
-        const textoExames = document.getElementById('textoExames');
-        function atualizarProgressoExames() {
-            const total = exames.length;
-            const marcados = Array.from(exames).filter(e => e.checked).length;
-            const porcentagem = (total > 0) ? Math.round((marcados / total) * 100) : 0;
-            barraExames.style.width = porcentagem + '%';
-            textoExames.textContent = `${porcentagem}% dos exames concluídos`;
-            exames.forEach((e, i) => {
-                localStorage.setItem('exame-' + i, e.checked);
-            });
-        }
-        exames.forEach((e, i) => {
-            const salvo = localStorage.getItem('exame-' + i);
-            if (salvo === 'true') e.checked = true;
-            e.addEventListener('change', atualizarProgressoExames);
-        });
-        atualizarProgressoExames();
     </script>
 
 </body>

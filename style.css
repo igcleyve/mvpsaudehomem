@@ -818,3 +818,29 @@ overflow: hidden;
     width: 100%;
     font-size: 1.1rem;
 }
+
+
+
+/* * Faz a label (texto) do desafio crescer e ocupar o espaço,
+ * empurrando o botão de apagar para a direita.
+*/
+.checklist-interativo li label {
+    flex-grow: 1; /* Faz o texto ocupar o espaço */
+    margin-right: 10px; /* Espaço antes do botão 'X' */
+}
+
+/* O botão 'X' de apagar */
+.desafio-apagar {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #b91c1c; /* Vermelho */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    padding: 0 5px;
+    flex-shrink: 0; /* Impede o botão de encolher */
+}
+.desafio-apagar:hover {
+    transform: scale(1.2);
+}
