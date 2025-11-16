@@ -16,7 +16,8 @@
                 <li><a href="home.html">Início</a></li>
                 <li><a href="prevencao.html">Prevenção</a></li>
                 <li><a href="saude-mental.html">Saúde Mental</a></li>
-                <li><a href="checklist.html" aria-current="page">Checklist e Desafios</a></li>
+                <li><a href="checklist.html">Checklist e Desafios</a></li>
+                <li><a href="ranking.html" aria-current="page">Ranking</a></li>
             </ul>
         </nav>
     </header>
@@ -159,7 +160,25 @@
             <section class="card-topico" id="recursos"></section>
 
         </section> </main>
+        <div class="accessibility-fixed-btn">
+        <div class="switch">
+            <label 
+                for="switch-button"
+                class="switch__label">
+                Modo Noturno
+            </label>
+            <button
+                id="switch-button" 
+                class="switch__button"
+                role="switch"
+                aria-checked="false">
+                <span class="button__text--on">on</span>
+                <span class="button__text--off">off</span>
+            </button>
+        </div>
+    </div>
     
+    <script src="accessibility.js" defer></script>
     <script>
         // --- PARTE 1: LÓGICA DA BARRA DE PROGRESSO ---
         

@@ -9,7 +9,7 @@ body {
 }
 
 /* Estilização do Cabeçalho */
-header {
+header {    
     background-color: #004d40; 
     color: #ffffff;
     padding: 20px 0;
@@ -590,7 +590,7 @@ overflow: hidden;
     transform: translateY(-50%);
     font-size: 1.8rem;
     font-weight: 300; /* Uma fonte mais fina para o '+' */
-    color: #006a58;
+    color: #0f57b6;
 }
 
 /* Quando o card está aberto (details[open]) */
@@ -843,4 +843,184 @@ overflow: hidden;
 }
 .desafio-apagar:hover {
     transform: scale(1.2);
+}
+
+
+/* --- ESTILOS DO MODO NOTURNO (PARA SER APLICADO PELO JS) --- */
+body.dark-mode {
+    background-color: #121212; 
+    color: #e0e0e0; /* Cor base clara para o texto */
+}
+
+body.dark-mode .container,
+body.dark-mode .login-container,
+body.dark-mode .card-topico {
+    background-color: #1e1e1e; /* Fundo mais escuro para os containers */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------------------------------ */
+/* NOVOS AJUSTES DE COR DE TEXTO PARA VISIBILIDADE NO MODO NOTURNO */
+/* ------------------------------------------------------------------ */
+
+/* Títulos e links (que geralmente têm cores fortes e não herdam a cor base) */
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h1,
+body.dark-mode li.strong,
+body.dark-mode p.strong,
+body.dark-mode .desafio-grupo h3,
+body.dark-mode .meus-desafios h2,
+body.dark-mode div.h3,
+body.dark-mode div.h4,
+body.dark-mode div.h1,
+body.dark-mode h4,
+body.dark-mode a {
+    color: #4CAF50; /* Um verde claro e vibrante para títulos e links */
+}
+
+/* Títulos Específicos */
+body.dark-mode .boas-vindas h2,
+body.dark-mode .titulo-secao-home,
+body.dark-mode .card-link-home h4,
+body.dark-mode .card-header h2,
+body.dark-mode .painel-rapido h3 {
+    color: #4CAF50; /* Mantém o verde claro para os principais títulos */
+}
+
+/* Parágrafos e Span */
+body.dark-mode p,
+body.dark-mode span {
+    color: #c9c9c9; /* Um cinza claro suave para o texto principal */
+}
+
+body.dark-mode .boas-vindas p,
+body.dark-mode .card-topico > p,
+body.dark-mode .item-description {
+    color: #b0b0b0 !important; /* Texto de descrição um pouco mais escuro */
+}
+
+/* Links em geral, garantindo que sejam legíveis */
+body.dark-mode header nav a {
+    color: #e0e0e0; /* Links brancos no menu */
+}
+body.dark-mode header nav a:hover {
+    background-color: #00796b; /* Mantenha o hover visível */
+}
+
+/* Campos de Formulário (Login/Lembretes) */
+body.dark-mode .login-form-area label,
+body.dark-mode #lembrete-form label {
+    color: #e0e0e0; /* Labels claras */
+}
+body.dark-mode .login-form-area input {
+    color: #ffffff; /* Texto digitado branco */
+    border-bottom-color: #666; /* Linha de input clara */
+    background: transparent; /* Fundo transparente */
+}
+body.dark-mode .login-form-area input:focus {
+    border-bottom-color: #4CAF50; /* Destaque verde no foco */
+}
+body.dark-mode .btn-cadastro-side {
+    border-color: #e0e0e0;
+}
+
+
+/* SEUS ESTILOS CSS CORRIGIDOS ESTÃO AQUI */
+.switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Espaçamento entre label e botão */
+}
+
+/* 1. ESTILO BASE DO BOTÃO (O trilho) */
+.switch__button {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc; /* Cor OFF */
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative; /* IMPORTANTE */
+    transition: background-color .2s ease-in-out;
+}
+
+/* 2. ESTILO DO PINO (O círculo ::after) */
+.switch__button::after {
+    content: "";
+    width: 22px; /* Diâmetro do pino */
+    height: 22px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 4px;
+    left: 4px; /* Começa à esquerda */
+    border-radius: 50%;
+    transition: transform .2s ease-in-out; /* Para o movimento suave */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* 3. ESTILO QUANDO LIGADO (Target no PRÓPRIO botão) */
+.switch__button[aria-checked="true"] {
+    background-color: #004d40; /* Verde escuro do seu tema */
+}
+
+/* 4. MOVIMENTO DO PINO (Target no ::after do botão ligado) */
+.switch__button[aria-checked="true"]::after {
+    transform: translateX(30px); 
+}
+
+/* 5. Estilos para esconder/mostrar texto - Corrigido */
+.button__text--off {
+    color: #fff;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 8px;
+    top: 7px;
+}
+.button__text--on {
+    color: #fff;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    display: none; /* Esconde por padrão */
+}
+
+/* Mostra o 'ON' e esconde o 'OFF' quando ligado */
+.switch__button[aria-checked="true"] .button__text--on {
+    display: block;
+}
+.switch__button[aria-checked="true"] .button__text--off {
+    display: none;
+}
+/* Estilo para a label que estava escondida */
+.switch__label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- ESTILO PARA FIXAR O BOTÃO NO CANTO DA TELA --- */
+.accessibility-fixed-btn {
+    position: fixed; /* O SEGREDO: fixa o elemento em relação à janela */
+    bottom: 30px;    /* 30px da borda inferior */
+    right: 30px;     /* 30px da borda direita */
+    z-index: 1000;   /* Garante que o botão fique acima de todos os outros elementos */
+    
+    /* Estilos visuais */
+    background-color: #ffffff; 
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para o Modo Noturno */
+body.dark-mode .accessibility-fixed-btn {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .accessibility-fixed-btn .switch__label {
+    color: #e0e0e0;
 }

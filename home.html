@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Guia da Saúde do Homem</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
                 <h2>Bem-vindo ao nosso Guia</h2>
                 <p>Um espaço dedicado à saúde masculina, focado em prevenção, bem-estar mental e hábitos saudáveis.</p>
             </section> 
-
+            
             <section class="painel-rapido">
                 <h3>Meu Painel</h3>
                 <ul class="painel-lista"> 
@@ -43,15 +44,13 @@
                             <strong>Desafio Diário (Pendente):</strong>
                             <span>Beber 2L de água.</span>
                         </div>
-                        
+                    </li>
+                    
                 </ul>
             </section>
 
             <section class="links-rapidos">
-                
-                
                 <h3 class="titulo-secao-home">Comece por aqui:</h3>
-                
                 
                 <div class="grid-links-home">
 
@@ -71,33 +70,49 @@
                     </a>
 
                 </div>
-
+            </section> 
+            
             <section class="depoimentos">
-                    <h3 class="titulo-secao-home">O que dizem nossos usuários</h3>
+                <h3 class="titulo-secao-home">O que dizem nossos usuários</h3>
     
                 <div class="grid-depoimentos">
-        
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"Eu tinha vergonha de falar sobre ansiedade. A seção de Saúde Mental me mostrou que é normal e onde buscar ajuda. O estigma acabou para mim."</p>
-                    <p class="depoimento-autor">- J. Silva, 34 anos</p>
-                </div>
-        
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"O checklist interativo parece bobo, mas me ajudou a criar uma rotina. Estou me sentindo com muito mais energia e já subi no ranking!"</p>
-                    <p class="depoimento-autor">- M. Costa, 42 anos</p>
-                </div>
+                    <div class="card-depoimento">
+                        <p class="depoimento-texto">"Eu tinha vergonha de falar sobre ansiedade. A seção de Saúde Mental me mostrou que é normal e onde buscar ajuda. O estigma acabou para mim."</p>
+                        <p class="depoimento-autor">- J. Silva, 34 anos</p>
+                    </div>
+                    
+                    <div class="card-depoimento">
+                        <p class="depoimento-texto">"O checklist interativo parece bobo, mas me ajudou a criar uma rotina. Estou me sentindo com muito mais energia e já subi no ranking!"</p>
+                        <p class="depoimento-autor">- M. Costa, 42 anos</p>
+                    </div>
 
-                <div class="card-depoimento">
-                    <p class="depoimento-texto">"Usei a página de Prevenção para anotar as perguntas certas para meu médico. Cheguei na consulta muito mais preparado. Fez toda a diferença."</p>
-                    <p class="depoimento-autor">- R. Almeida, 51 anos</p>
+                    <div class="card-depoimento">
+                        <p class="depoimento-texto">"Usei a página de Prevenção para anotar as perguntas certas para meu médico. Cheguei na consulta muito mais preparado. Fez toda a diferença."</p>
+                        <p class="depoimento-autor">- R. Almeida, 51 anos</p>
+                    </div>
                 </div>
-
-    </div>
-</section>
             </section>
-            
         </main>
     </div>
 
-</body>
+    <div class="accessibility-fixed-btn">
+        <div class="switch">
+            <label 
+                for="switch-button"
+                class="switch__label">
+                Modo Noturno
+            </label>
+            <button
+                id="switch-button" 
+                class="switch__button"
+                role="switch"
+                aria-checked="false">
+                <span class="button__text--on">on</span>
+                <span class="button__text--off">off</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="accessibility.js" defer></script>
+</body> 
 </html>
